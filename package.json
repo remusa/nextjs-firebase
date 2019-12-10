@@ -9,12 +9,6 @@
     "deploy": "now",
     "prettier": "prettier --write \"**/*.{html,js,jsx,ts,tsx,json,md,yml}\""
   },
-  "lint-staged": {
-    "*.{html,js,json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "dependencies": {
     "firebase": "^7.5.0",
     "isomorphic-fetch": "^2.2.1",
@@ -37,6 +31,12 @@
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "typescript": "3.5.2"
+  },
+  "lint-staged": {
+    "*.{html,js,json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "license": "ISC"
 }

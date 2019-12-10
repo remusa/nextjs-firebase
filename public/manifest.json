@@ -1,7 +1,7 @@
 {
-  "name": "Does it break a fast?",
-  "short_name": "does-it-break-fast",
-  "description": "Nextjs using service worker via next-offline",
+  "name": "Next.js + Firebase starter",
+  "short_name": "nextjs-firebase",
+  "description": "A Next.js + Firebase with auth starter",
   "icons": [
     {
       "src": "/static/pwa.png",
