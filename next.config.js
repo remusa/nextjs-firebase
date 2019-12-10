@@ -2,7 +2,6 @@
 const withOffline = require('next-offline')
 
 const nextConfig = {
-  env: env,
   target: 'serverless',
 	workboxOpts: {
 		swDest: 'public/service-worker.js',

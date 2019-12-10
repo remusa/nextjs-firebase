@@ -24,7 +24,7 @@ const Footer: React.FC<Props> = () => {
   return (
     <FooterStyles>
       <footer>
-        <p>Copyright © RMS 2019.</p>
+        <p>Built by RMS in 2019</p>
         <Toggle isOn={theme === 'dark'} handleToggle={toggleTheme} />
       </footer>
     </FooterStyles>

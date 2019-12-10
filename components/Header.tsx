@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { useAuth } from '../context/Firebase/AuthContext'
 
 const HeaderStyles = styled.header`
   grid-area: header;
@@ -11,7 +12,8 @@ const HeaderStyles = styled.header`
     justify-content: space-between;
     align-items: center;
 
-    .left {
+    .left,
+    .right {
       display: flex;
       justify-content: space-between;
 
@@ -25,26 +27,42 @@ const HeaderStyles = styled.header`
 
 interface Props {}
 
-const Header: React.FC<Props> = () => (
-  <HeaderStyles>
-    <nav>
-      <div className='left'>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
+const Header: React.FC<Props> = () => {
+  const { user, loggedIn, logout } = useAuth()
 
-        <Link href='/submit'>
-          <a>Submit food</a>
-        </Link>
-      </div>
+  return (
+    <HeaderStyles>
+      <nav>
+        <div className='left'>
+          <Link href='/'>
+            <a>Home</a>
+          </Link>
+        </div>
 
-      <div className='right'>
-        <Link href='/about'>
-          <a>About</a>
-        </Link>
-      </div>
-    </nav>
-  </HeaderStyles>
-)
+        <div className='right'>
+          {!loggedIn && !user ? (
+            <>
+              <Link href='/login'>
+                <a>Login</a>
+              </Link>
+
+              <Link href='/register'>
+                <a>Register</a>
+              </Link>
+            </>
+          ) : (
+            <>
+              <span>Welcome {user && (user.displayName || user.email)}</span>
+
+              <button type='button' onClick={logout}>
+                Logout
+              </button>
+            </>
+          )}
+        </div>
+      </nav>
+    </HeaderStyles>
+  )
+}
 
 export default Header

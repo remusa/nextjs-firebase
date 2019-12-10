@@ -1,10 +1,10 @@
 import 'isomorphic-fetch'
-import { NextPage, NextPageContext } from 'next'
+import { NextPage } from 'next'
 import Layout from '../components/Layout'
 
 interface IProps {}
 
-const Index: NextPage<IProps> = ({}) => {
+const Index: NextPage<IProps> = () => {
   return (
     <Layout>
       <h1>Next.js + Firebase starter</h1>
@@ -12,8 +12,8 @@ const Index: NextPage<IProps> = ({}) => {
   )
 }
 
-interface Context extends NextPageContext {}
+// interface Context extends NextPageContext {}
 
-Index.getInitialProps = async (ctx: Context) => {}
+// Index.getInitialProps = async (ctx: Context) => {}
 
 export default Index
