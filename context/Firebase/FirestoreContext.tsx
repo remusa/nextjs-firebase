@@ -16,7 +16,6 @@ const FirestoreProvider: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     // let snapshot = () => console.log('No unsubscribe')
-
     const getData = async () => {
       if (user && loggedIn) {
         const entries = []
@@ -48,7 +47,6 @@ const FirestoreProvider: React.FC<Props> = ({ children }) => {
     }
 
     getData()
-
     // return () => snapshot()
   }, [])
 
