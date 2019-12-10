@@ -1,4 +1,3 @@
-import 'isomorphic-fetch'
 import { NextPage } from 'next'
 import Layout from '../components/Layout'
 

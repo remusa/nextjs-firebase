@@ -30,6 +30,12 @@ interface Props {}
 const Header: React.FC<Props> = () => {
   const { user, loggedIn, logout } = useAuth()
 
+  const displayName = user ? user.displayName || user.email : ''
+
+  const handleLogout = () => {
+    logout()
+  }
+
   return (
     <HeaderStyles>
       <nav>
@@ -52,9 +58,9 @@ const Header: React.FC<Props> = () => {
             </>
           ) : (
             <>
-              <span>Welcome {user && (user.displayName || user.email)}</span>
+              <span>Welcome {displayName}</span>
 
-              <button type='button' onClick={logout}>
+              <button type='button' onClick={handleLogout}>
                 Logout
               </button>
             </>

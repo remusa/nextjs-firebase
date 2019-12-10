@@ -38,6 +38,8 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
         setIsLoggedIn(false)
       }
     })
+
+    // return () => unsubscribe
   }, [])
 
   const loginWithGoogle = async () => {
@@ -47,6 +49,8 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
 
   const logout = async () => {
     await fireauth.signOut()
+    // setUser(null)
+    // setIsLoggedIn(false)
     router.push('/login')
   }
 
