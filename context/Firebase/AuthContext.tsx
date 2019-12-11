@@ -3,12 +3,12 @@ import { useRouter } from 'next/dist/client/router'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { fireauth, googleProvider } from '../../utils/firebase'
 
-interface IUser {
-  user: {
-    uid: string
-    email: string
-  }
-}
+// interface IUser {
+//   user: {
+//     uid: string
+//     email: string
+//   }
+// }
 
 interface IContext {
   user: User
