@@ -28,8 +28,12 @@
     "@types/styled-components": "4.1.16",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.0",
+    "dotenv": "^8.2.0",
+    "dotenv-load": "^2.0.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-env": "^1.1.0",
     "prettier": "^1.19.1",
     "typescript": "3.5.2"
   },
