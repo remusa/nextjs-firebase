@@ -1,4 +1,26 @@
 import { createGlobalStyle } from 'styled-components'
+import red from '@material-ui/core/colors/red'
+import { createMuiTheme } from '@material-ui/core/styles'
+
+// Create a theme instance.
+export const materialTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#556cd6'
+    },
+    secondary: {
+      main: '#19857b'
+    },
+    error: {
+      main: red.A400
+    },
+    background: {
+      default: '#fff'
+    }
+  }
+})
+
+// Styled Components
 
 export const defaultTheme = {
   white: '#fff',
@@ -20,8 +42,8 @@ export const darkTheme = {
 }
 
 export const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    /* @import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); */
+    /* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
 
     html {
         box-sizing: border-box;
@@ -36,12 +58,11 @@ export const GlobalStyle = createGlobalStyle`
     body {
         transition: all 0.3s linear;
         height: 100vh;
-        /* align-items: center; */
         margin: 0;
         padding: 0;
         background-color: ${props => props.theme.background};
         color: ${props => props.theme.font};
-        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        /* font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
         line-height: 2;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;

@@ -1,3 +1,4 @@
+import { Container } from '@material-ui/core'
 import React from 'react'
 import { AuthProvider } from './Firebase/AuthContext'
 import { FirestoreProvider } from './Firebase/FirestoreContext'
@@ -8,11 +9,13 @@ interface Props {
 }
 
 const AppProviders: React.FC<Props> = ({ children }) => (
-  <ThemeProvider>
-    <AuthProvider>
-      <FirestoreProvider>{children}</FirestoreProvider>
-    </AuthProvider>
-  </ThemeProvider>
+  <Container>
+    <ThemeProvider>
+      <AuthProvider>
+        <FirestoreProvider>{children}</FirestoreProvider>
+      </AuthProvider>
+    </ThemeProvider>
+  </Container>
 )
 
 export default AppProviders
