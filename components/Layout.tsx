@@ -1,4 +1,3 @@
-import Container from '@material-ui/core/Container'
 import React from 'react'
 import styled from 'styled-components'
 import Footer from './Footer'
@@ -33,15 +32,13 @@ interface Props {
 
 const Layout: React.FC<Props> = props => {
   return (
-    <Container maxWidth='lg'>
-      <StyledLayout>
-        <Header />
+    <StyledLayout>
+      <Header />
 
-        <main>{props.children}</main>
+      <main>{props.children}</main>
 
-        <Footer />
-      </StyledLayout>
-    </Container>
+      <Footer />
+    </StyledLayout>
   )
 }
 

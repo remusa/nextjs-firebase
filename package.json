@@ -10,9 +10,7 @@
     "prettier": "prettier --write \"**/*.{html,js,jsx,ts,tsx,json,md,yml}\""
   },
   "dependencies": {
-    "@material-ui/core": "^4.7.2",
-    "@material-ui/icons": "^4.5.1",
-    "@material-ui/styles": "^4.7.1",
+    "dotenv": "^8.2.0",
     "firebase": "^7.5.0",
     "isomorphic-fetch": "^2.2.1",
     "next": "^9.1.5",
@@ -31,8 +29,11 @@
     "@types/styled-components": "4.1.16",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.0",
+    "dotenv-load": "^2.0.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-env": "^1.1.0",
     "prettier": "^1.19.1",
     "typescript": "3.5.2"
   },
